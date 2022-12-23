@@ -14,13 +14,6 @@ const StartPage = () => {
             2004 года.
           </p>
         </div>
-        <StaticImage
-          className="start-page__main-image"
-          src="../../assets/images/startImage.png"
-          width={542}
-          height={713}
-          alt="stud-first"
-        />
         <CustomForm classname={'first-form'} id={'orders'} />
       </div>
     </div>
