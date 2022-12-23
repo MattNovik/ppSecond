@@ -1,0 +1,118 @@
+.footer {
+  padding: 50px 45px;
+  background-color: $color-default-white;
+
+  @include vp--1023 {
+    padding: 0px 15px 60px;
+    background-color: $main-color;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1140px;
+    margin: 0 auto;
+
+    @include vp--1023 {
+      display: grid;
+      column-gap: 106px;
+      row-gap: 16px;
+      grid-template-columns: 200px 1fr;
+      grid-template-areas:
+        'socialsFoot copyright'
+        'socialsFoot cards';
+    }
+
+    @include vp--767 {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        'socialsFoot '
+        'copyright'
+        'cards';
+    }
+  }
+
+  &__copyright {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: $light-text;
+
+    @include vp--1023 {
+      grid-area: copyright;
+    }
+  }
+
+  &__payment-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+
+    @include vp--1023 {
+      grid-area: cards;
+    }
+
+    @include vp--767 {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 16px;
+    }
+  }
+
+  &__payment-list {
+    display: flex;
+    column-gap: 30px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+
+  &__payment-item {
+    width: auto;
+
+    svg {
+      max-width: 50px;
+    }
+  }
+
+  &__payment-text {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: $light-text;
+    white-space: nowrap;
+  }
+
+  &__socials {
+    display: none;
+
+    @include vp--1023 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      row-gap: 16px;
+      grid-area: socialsFoot;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    color: $light-text;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  &__social-list {
+    align-items: center;
+    height: 100%;
+    display: flex;
+    column-gap: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}
