@@ -44,10 +44,6 @@ const Menu = ({ data, menuRef, handleClose }) => {
         >
           Вход
         </a>
-        <a href="#orders" className="menu__reg-button" type="button">
-          Регистрация
-          <Arrow />
-        </a>
       </div>
       <div className="menu__wrapper-tel-email">
         <p className="menu__title">Контакты:</p>

@@ -8,13 +8,10 @@ const StartPage = () => {
     <div className="start-page">
       <div className="start-page__container">
         <div className="start-page__text-wrapper">
-          <p className="start-page__help-text">Помогаем учиться</p>
-          <h1 className="start-page__title">{`${
-            'Заказать ' + 'учебную работу'
-          }`}</h1>
+          <h1 className="start-page__title">{`${'Закажи студенческую работу без посредников'}`}</h1>
           <p className="start-page__info-text">
-            Сервис помощи студентам по всем типам студенческих работ. Более 300
-            000 экспертов помогут разобраться в сложной теме.
+            Студсервис — организация помощи студентам, официально работает с
+            2004 года.
           </p>
         </div>
         <StaticImage

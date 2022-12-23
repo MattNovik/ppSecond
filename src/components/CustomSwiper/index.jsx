@@ -12,7 +12,6 @@ const CustomSwiper = ({ data }) => {
     <section className="custom-swiper" id="reviews">
       <div className="custom-swiper__container">
         <p className="custom-swiper__help-text">Отзывы</p>
-        <h2 className="custom-swiper__title">Что о нас говорят студенты?</h2>
         <Swiper
           modules={[Navigation, Pagination]}
           autoHeight={true}
@@ -32,79 +31,77 @@ const CustomSwiper = ({ data }) => {
           onSlideChange={() => console.log('slide change')}
           /* onSwiper={(swiper) => console.log(swiper)} */
         >
-          <button className="swiper-button-next" type="button">
-            <ArrowLong />
-          </button>
-          <button className="swiper-button-prev" type="button">
-            <ArrowLong />
-          </button>
+          <div className="custom-swiper__buttons">
+            <button className="swiper-button-prev" type="button">
+              <ArrowLong />
+            </button>
+            <button className="swiper-button-next" type="button">
+              <ArrowLong />
+            </button>
+          </div>
           {data && data.length
             ? data.map((item, index) => (
                 <SwiperSlide key={index}>
                   <div className="custom-swiper__item-wrapper">
-                    <p className="custom-swiper__item-text">
-                      <Braces className="custom-swiper__item-braces" />
-                      {item.text}
-                    </p>
                     <div className="custom-swiper__avatar-wrapper">
                       {index === 0 ? (
                         <StaticImage
                           src={'../../assets/images/reviewFirst.jpg'}
                           className="custom-swiper__avatar-img"
                           alt="avatar"
-                          width={72}
-                          height={72}
+                          width={240}
+                          height={289}
                         />
                       ) : index === 1 ? (
                         <StaticImage
                           src={'../../assets/images/reviewSecond.jpg'}
                           className="custom-swiper__avatar-img"
                           alt="avatar"
-                          width={72}
-                          height={72}
+                          width={240}
+                          height={289}
                         />
                       ) : index === 2 ? (
                         <StaticImage
                           src={'../../assets/images/reviewThird.jpg'}
                           className="custom-swiper__avatar-img"
                           alt="avatar"
-                          width={72}
-                          height={72}
+                          width={240}
+                          height={289}
                         />
                       ) : index === 3 ? (
                         <StaticImage
                           src={'../../assets/images/reviewFourth.jpg'}
                           className="custom-swiper__avatar-img"
                           alt="avatar"
-                          width={72}
-                          height={72}
+                          width={240}
+                          height={289}
                         />
                       ) : index === 4 ? (
                         <StaticImage
                           src={'../../assets/images/reviewFirth.jpg'}
                           className="custom-swiper__avatar-img"
                           alt="avatar"
-                          width={72}
-                          height={72}
+                          width={240}
+                          height={289}
                         />
                       ) : (
                         <StaticImage
                           src={'../../assets/images/reviewFirst.jpg'}
                           className="custom-swiper__avatar-img"
                           alt="avatar"
-                          width={72}
-                          height={72}
+                          width={240}
+                          height={289}
                         />
                       )}
-
-                      <div className="custom-swiper__avatar-text-wrapper">
-                        <p className="custom-swiper__avatar-name">
-                          {item.name}
-                        </p>
-                        <p className="custom-swiper__avatar-theme">
-                          {item.theme}
-                        </p>
-                      </div>
+                    </div>
+                    <div className="custom-swiper__avatar-text-wrapper">
+                      <Braces className="custom-swiper__item-braces" />
+                      <p className="custom-swiper__item-text">{item.text}</p>
+                      <Braces className="custom-swiper__item-braces custom-swiper__item-braces--rotates" />
+                      <p className="custom-swiper__avatar-name">{item.name}</p>
+                      <p className="custom-swiper__avatar-theme">
+                        {item.theme}
+                      </p>
                     </div>
                   </div>
                 </SwiperSlide>

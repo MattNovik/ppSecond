@@ -67,7 +67,7 @@ const CustomForm = ({ classname, id }) => {
     >
       <div className="custom-form__inputs-wrapper">
         <input
-          type="text"
+          type={classname === 'second-form' ? 'hidden' : 'text'}
           name="theme"
           className={
             formik.errors.theme
@@ -78,6 +78,7 @@ const CustomForm = ({ classname, id }) => {
           onChange={formik.handleChange}
           placeholder="ТЕМА"
         />
+
         <input
           type="text"
           name="email"

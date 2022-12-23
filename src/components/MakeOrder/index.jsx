@@ -7,22 +7,23 @@ const MakeOrder = () => {
   return (
     <section className="make-order">
       <div className="make-order__container">
-        <StaticImage
-          src="../../assets/images/illustrationFirst.png"
-          alt="illFirst"
-          placeholder="blurred"
-          width={154}
-          height={272}
-          className="make-order__image make-order__image--left"
-        />
         <div className="make-order__form-wrapper">
-          <p className="make-order__help-text">РАЗМЕСТИТЬ ЗАКАЗ</p>
-          <h2 className="make-order__title">
-            Оставь заявку и мы выберем лучшего автора
-          </h2>
-          <CustomForm classname={'second-form'} />
+          <StaticImage
+            src="../../assets/images/order.png"
+            alt="illFirst"
+            placeholder="blurred"
+            width={313}
+            height={416}
+            className="make-order__image"
+          />
+          <div className="make-order__text-wrapper">
+            <h2 className="make-order__title">
+              Дарим скидку <span>до 15%</span> на первый заказ при регистрации:
+            </h2>
+            <CustomForm classname={'second-form'} />
+          </div>
         </div>
-
+        {/* 
         <StaticImage
           src="../../assets/images/illustrationSecond.png"
           alt="illSecond"
@@ -30,7 +31,7 @@ const MakeOrder = () => {
           width={166}
           height={286}
           className="make-order__image make-order__image--right"
-        />
+        /> */}
       </div>
     </section>
   );

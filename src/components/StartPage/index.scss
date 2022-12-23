@@ -1,6 +1,6 @@
 .start-page {
   position: relative;
-  margin: -91px 0 0 0;
+  margin: -91px 0 200px 0;
   padding: 91px 0 0 0;
 
   @include vp--1023 {
@@ -12,75 +12,24 @@
     content: '';
     position: absolute;
     left: 0;
-    top: 91px;
-    width: 80%;
-    height: calc(100% - 91px);
-    background-color: $main-color;
-    border-radius: 0 90px 90px 0;
-    z-index: -1;
-
-    @include vp--1439 {
-      width: 88%;
-    }
-
-    @include vp--1199 {
-      width: 93%;
-    }
-
-    @include vp--1023 {
-      top: 50px;
-      height: 418px;
-    }
-
-    @include vp--767 {
-      width: 100%;
-      height: 365px;
-      border-radius: 0;
-    }
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
     right: 0;
     top: 0;
-    width: 48%;
-    height: 543px;
-    background-color: #fff8f7;
-    border-radius: 0 0 0 120px;
-    z-index: -1;
-
-    @include vp--1439 {
-      width: 46%;
-    }
-
-    @include vp--1199 {
-      width: 47%;
-    }
-
-    @include vp--1023 {
-      width: 332px;
-      height: 318px;
-    }
-
-    @include vp--767 {
-      width: 310px;
-    }
-
-    @include vp--569 {
-      width: 200px;
-    }
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/images/mainBG.png');
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   &__container {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     row-gap: 55px;
     max-width: 1140px;
     margin: 0 auto;
-    min-height: 701px;
+    min-height: 610px;
     z-index: 10;
 
     @include vp--1439 {
@@ -104,6 +53,7 @@
   }
 
   &__main-image {
+    display: none;
     position: absolute !important;
     right: 0;
     top: 0;
@@ -150,7 +100,12 @@
   }
 
   &__text-wrapper {
-    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    height: 100%;
+    max-width: 70%;
 
     @include vp--1439 {
       max-width: 55%;
@@ -177,10 +132,11 @@
 
   &__title {
     font-weight: 700;
-    font-size: 3.625rem;
-    line-height: 4.625rem;
-    margin: 0 0 35px;
-    color: $dark-text;
+    font-size: 3.125rem;
+    line-height: 3.8rem;
+    letter-spacing: 0.2px;
+    margin: 0 0 28px;
+    color: $color-default-white;
 
     @include vp--1199 {
       font-size: 3.2rem;
@@ -201,9 +157,9 @@
 
   &__info-text {
     font-weight: 400;
-    font-size: 1.125rem;
-    line-height: 1.625rem;
-    color: $light-text;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: $color-default-white;
     margin: 0;
 
     @include vp--767 {

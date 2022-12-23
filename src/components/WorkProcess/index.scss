@@ -1,5 +1,5 @@
 .work-process {
-  margin: 0 0 170px;
+  margin: 0 0 200px;
 
   @include vp--767 {
     margin: 0 0 90px;
@@ -11,7 +11,6 @@
     column-gap: 60px;
     max-width: 1140px;
     margin: 0 auto;
-    padding: 0 60px;
 
     @include vp--1439 {
       column-gap: 30px;
@@ -30,13 +29,33 @@
   }
 
   &__image-wrapper {
+    position: relative;
     max-width: 50%;
+    height: 486px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 
     @include vp--1023 {
       max-width: none;
     }
+  }
+
+  &__inside-wrapper {
+    height: 397px;
+    width: 431px;
+    background: linear-gradient(180deg, #37abed 0%, #2d47a5 100%);
+    border: 16px solid #ffffff;
+    border-radius: 260px 260px 30px 30px;
+    box-shadow: 0px 0px 31px 12px rgba(38, 66, 162, 0.1);
+  }
+
+  &__image {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 321px;
+    height: 486px;
   }
 
   &__info-wrapper {
@@ -62,16 +81,30 @@
   }
 
   &__title {
+    position: relative;
     font-weight: 700;
     font-size: 2.5rem;
     line-height: 3.125rem;
     color: $dark-text;
-    margin: 0 0 70px;
+    margin: 0 0 60px;
+
+    z-index: 10;
 
     @include vp--767 {
       font-size: 1.25rem;
       line-height: 1.5rem;
       margin: 0 0 40px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      z-index: -1;
+      bottom: 6px;
+      width: 169px;
+      height: 11px;
+      background-color: $color-biruza;
     }
   }
 
@@ -82,45 +115,15 @@
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    row-gap: 40px;
-
-    &:before {
-      content: '';
-      position: absolute;
-      left: 8px;
-      top: 0;
-      height: 100%;
-      width: 1px;
-      background-color: #9a9ca5;
-      opacity: 0.5;
-    }
+    row-gap: 25px;
   }
 
   &__item {
-    padding: 0 0 0 50px;
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
     position: relative;
     margin: 0;
-
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 16px;
-      width: 16px;
-      background-color: $color-default-white;
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      left: 4px;
-      top: 4px;
-      width: 8px;
-      height: 8px;
-      background-color: $second-color;
-      border-radius: 50%;
-    }
   }
 
   &__item-info-text {
@@ -132,11 +135,11 @@
   }
 
   &__item-title {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1.25rem;
     line-height: 150%;
     color: $dark-text;
-    margin: 0 0 8px;
+    margin: 0;
 
     @include vp--767 {
       font-size: 1rem;
