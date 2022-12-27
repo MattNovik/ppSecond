@@ -1,9 +1,7 @@
 import './index.scss';
 import * as React from 'react';
-import Arrow from '../../assets/svg/arrow.svg';
 import Close from '../../assets/svg/close.svg';
 import Tg from '../../assets/svg/tg.svg';
-import Ok from '../../assets/svg/ok.svg';
 import Vk from '../../assets/svg/vk.svg';
 import Phone from '../../assets/svg/phone.svg';
 import Email from '../../assets/svg/email.svg';

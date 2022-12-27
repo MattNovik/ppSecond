@@ -1,7 +1,6 @@
 import './index.scss';
 import * as React from 'react';
 import CustomForm from '../CustomForm';
-import { StaticImage } from 'gatsby-plugin-image';
 
 const StartPage = () => {
   return (
