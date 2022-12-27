@@ -4,10 +4,10 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 
-const CustomForm = ({ classname, id }) => {
+const CustomForm = ({ classname, id, hidden }) => {
   const formik = useFormik({
     initialValues: {
-      theme: '',
+      theme: hidden ? 'не определена' : '',
       email: '',
       agreeament: true,
     },

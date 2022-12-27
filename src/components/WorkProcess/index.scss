@@ -2,7 +2,7 @@
   margin: 0 0 200px;
 
   @include vp--767 {
-    margin: 0 0 90px;
+    margin: 0 0 100px;
   }
 
   &__container {
@@ -16,9 +16,17 @@
       column-gap: 30px;
     }
 
+    @include vp--1199 {
+      max-width: 1020px;
+    }
+
+    @include vp--1139 {
+      max-width: 904px;
+    }
+
     @include vp--1023 {
       padding: 0 15px;
-      flex-direction: column;
+      flex-direction: column-reverse;
       align-items: center;
       row-gap: 70px;
     }
@@ -37,6 +45,8 @@
 
     @include vp--1023 {
       max-width: none;
+      width: 290px;
+      height: 315px;
     }
   }
 
@@ -47,6 +57,11 @@
     border: 16px solid #ffffff;
     border-radius: 260px 260px 30px 30px;
     box-shadow: 0px 0px 31px 12px rgba(38, 66, 162, 0.1);
+
+    @include vp--1023 {
+      width: 290px;
+      height: 315px;
+    }
   }
 
   &__image {
@@ -56,6 +71,11 @@
     transform: translate(-50%, 0);
     width: 321px;
     height: 486px;
+
+    @include vp--1023 {
+      width: 235px;
+      height: 355px;
+    }
   }
 
   &__info-wrapper {

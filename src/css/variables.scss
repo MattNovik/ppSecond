@@ -21,6 +21,7 @@ $vp--570: 570px;
 $vp--768: 768px;
 $vp--900: 900px;
 $vp--1024: 1024px;
+$vp--1140: 1140px;
 $vp--1200: 1200px;
 $vp--1246: 1246px;
 $vp--1280: 1280px;
@@ -70,6 +71,12 @@ $vp--2560: 2560px;
 
 @mixin vp--1199 {
   @media (max-width: $vp--1200 - 1) {
+    @content;
+  }
+}
+
+@mixin vp--1139 {
+  @media (max-width: $vp--1140 - 1) {
     @content;
   }
 }

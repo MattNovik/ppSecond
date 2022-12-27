@@ -1,12 +1,12 @@
 .make-order {
-  padding: 120px 0 110px;
+  padding: 0 0 110px;
 
   @include vp--1023 {
-    padding: 100px 15px;
+    padding: 0 0 100px;
   }
 
   @include vp--767 {
-    padding: 58px 15px;
+    padding: 0 0 77px;
   }
 
   &__container {
@@ -16,7 +16,6 @@
     column-gap: 50px;
     max-width: 1140px;
     margin: 0 auto;
-    box-shadow: 0px 0px 31px 12px rgba(38, 66, 162, 0.1);
     border-radius: 30px;
 
     @include vp--1439 {
@@ -29,6 +28,18 @@
       column-gap: 100px;
       row-gap: 50px;
     }
+
+    @include vp--1199 {
+      max-width: 1020px;
+    }
+
+    @include vp--1139 {
+      max-width: 904px;
+    }
+
+    @include vp--767 {
+      row-gap: 0;
+    }
   }
 
   &__form-wrapper {
@@ -36,6 +47,7 @@
     display: flex;
     width: 100%;
     background: linear-gradient(90deg, #2c48a5 -10.62%, #38adee 100%);
+    box-shadow: 0px 0px 31px 12px rgba(38, 66, 162, 0.1);
     border: 16px solid #ffffff;
     column-gap: 70px;
     border-radius: 30px;
@@ -48,8 +60,23 @@
       margin: 0 auto;
     }
 
+    @include vp--1199 {
+      padding: 0 52px 0 370px;
+    }
+
+    @include vp--1139 {
+      padding: 0 52px 0 260px;
+    }
+
     @include vp--1023 {
       max-width: none;
+      padding: 0 0 0 140px;
+    }
+
+    @include vp--767 {
+      padding: 60px 4px 0;
+      display: flex;
+      flex-direction: column-reverse;
     }
   }
 
@@ -57,6 +84,15 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @include vp--1139 {
+      position: relative;
+      z-index: 100;
+    }
+
+    @include vp--767 {
+      margin: 0 0 20px;
+    }
   }
 
   &__help-text {
@@ -83,7 +119,8 @@
     @include vp--767 {
       font-size: 1.25rem;
       line-height: 1.5rem;
-      margin: 0 0 40px;
+      margin: 0 0 20px;
+      text-align: center;
     }
 
     span {
@@ -97,13 +134,34 @@
     min-height: 280px !important;
     left: 90px;
     bottom: 0;
-    @include vp--1023 {
-      display: none !important;
+
+    @include vp--1199 {
+      left: 20px;
+      min-height: 240px !important;
+      min-width: 140px !important;
     }
+
+    @include vp--1139 {
+      z-index: 10;
+      left: -20px;
+    }
+
+    @include vp--767 {
+      width: 184px;
+      height: 244px;
+      position: relative;
+      left: 0;
+    }
+
     & img {
       width: auto !important;
       height: auto !important;
       object-fit: contain !important;
+
+      @include vp--767 {
+        width: 100% !important;
+        height: 100% !important;
+      }
     }
 
     &--left {

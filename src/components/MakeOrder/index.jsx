@@ -20,7 +20,7 @@ const MakeOrder = () => {
             <h2 className="make-order__title">
               Дарим скидку <span>до 15%</span> на первый заказ при регистрации:
             </h2>
-            <CustomForm classname={'second-form'} />
+            <CustomForm classname={'second-form'} hidden={true} />
           </div>
         </div>
         {/* 

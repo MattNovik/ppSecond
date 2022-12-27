@@ -66,16 +66,6 @@ const Menu = ({ data, menuRef, handleClose }) => {
               <Tg />
             </a>
           </li>
-          <li className="menu__social-item ok">
-            <a
-              href="https://vk.com/referat"
-              aria-label="ok link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Ok />
-            </a>
-          </li>
           <li className="menu__social-item vk">
             <a
               href="https://vk.com/referat"

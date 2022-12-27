@@ -94,6 +94,10 @@
     line-height: 1.5rem;
     transition: color 0.3s ease;
 
+    @include vp--1023 {
+      color: $light-text;
+    }
+
     &:hover {
       color: $dark-text;
     }
@@ -133,6 +137,10 @@
 
     &:hover {
       color: $dark-text;
+    }
+
+    @include vp--1023 {
+      color: $light-text;
     }
   }
 

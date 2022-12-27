@@ -3,7 +3,7 @@
   background-color: rgba(55, 170, 236, 0.1);
 
   @include vp--1023 {
-    padding: 0px 15px 60px;
+    padding: 60px 15px;
     background-color: $main-color;
   }
 
@@ -18,23 +18,32 @@
     max-width: 1140px;
     margin: 0 auto;
 
+    @include vp--1199 {
+      max-width: 1020px;
+    }
+
+    @include vp--1139 {
+      max-width: 904px;
+    }
+
     @include vp--1023 {
+      width: 100%;
       display: grid;
       column-gap: 106px;
       row-gap: 16px;
-      grid-template-columns: 200px 1fr;
+      grid-template-columns: 1fr;
       grid-template-areas:
-        'socialsFoot copyright'
-        'socialsFoot cards';
+        'addres'
+        'cards'
+        'contact';
     }
 
-    @include vp--767 {
-      grid-template-columns: 1fr;
+    /*     @include vp--767 {
       grid-template-areas:
         'socialsFoot '
         'copyright'
         'cards';
-    }
+    } */
   }
 
   &__copyright {
@@ -55,6 +64,7 @@
     column-gap: 30px;
 
     @include vp--767 {
+      margin: 20px 0 0;
       flex-direction: column;
       align-items: flex-start;
       row-gap: 16px;
@@ -106,6 +116,10 @@
     margin: 0;
     white-space: nowrap;
     margin: 0 0 8px;
+
+    @include vp--767 {
+      white-space: normal;
+    }
   }
 
   &__social-list {
@@ -121,6 +135,10 @@
   &__tel-socials {
     display: flex;
     column-gap: 16px;
+
+    @include vp--1023 {
+      grid-area: telSocial;
+    }
   }
 
   &__wrapper-tel-email {
@@ -128,6 +146,23 @@
     flex-direction: column;
     row-gap: 21px;
     grid-area: contact;
+
+    @include vp--1023 {
+      display: grid;
+      justify-content: space-between;
+      grid-template-areas:
+        'title email'
+        'telSocial copyright';
+    }
+
+    @include vp--767 {
+      margin: 14px 0 0;
+      grid-template-areas:
+        'title'
+        'telSocial'
+        'email'
+        'copyright';
+    }
   }
 
   &__wrapper-addres {
@@ -138,6 +173,10 @@
 
     @include vp--1439 {
       margin: 0 auto;
+    }
+
+    @include vp--1023 {
+      margin: 0 auto 0 0;
     }
 
     & .footer__title {
@@ -177,6 +216,10 @@
     color: $light-text;
     transition: color 0.3s ease;
 
+    @include vp--1023 {
+      grid-area: email;
+    }
+
     &:hover {
       color: $dark-text;
     }
@@ -202,6 +245,8 @@
     color: $light-text;
     text-decoration: none;
     transition: color 0.3s ease;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 
     &:hover {
       color: $dark-text;
