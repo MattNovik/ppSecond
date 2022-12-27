@@ -125,6 +125,11 @@
       width: 169px;
       height: 11px;
       background-color: $color-biruza;
+
+      @include vp--767 {
+        height: 6px;
+        bottom: 2px;
+      }
     }
   }
 

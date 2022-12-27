@@ -5,8 +5,6 @@ import MasterCard from '../../assets/svg/ms.svg';
 import Mir from '../../assets/svg/mir.svg';
 import Tg from '../../assets/svg/tg.svg';
 import Vk from '../../assets/svg/vk.svg';
-import Phone from '../../assets/svg/phone.svg';
-import Email from '../../assets/svg/email.svg';
 
 const Footer = () => {
   return (
