@@ -207,7 +207,7 @@
       width: 240px !important;
       height: 289px !important;
       position: relative !important;
-      border-radius: 20px;
+      border-radius: 10px;
 
       @include vp--1023 {
         width: 225px !important;
@@ -225,10 +225,12 @@
 
     & picture {
       & img {
-        height: 270px !important;
-        width: 100% !important;
-        min-width: 100% !important;
-        object-fit: cover;
+        @include vp--767 {
+          height: 270px !important;
+          width: 100% !important;
+          min-width: 100% !important;
+          object-fit: cover;
+        }
       }
     }
   }

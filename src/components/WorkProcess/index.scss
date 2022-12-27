@@ -127,6 +127,7 @@
       background-color: $color-biruza;
 
       @include vp--767 {
+        width: 130px;
         height: 6px;
         bottom: 2px;
       }

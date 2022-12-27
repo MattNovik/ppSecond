@@ -129,7 +129,7 @@
   }
 
   &__image {
-    position: absolute;
+    position: absolute !important;
     min-width: 160px !important;
     min-height: 280px !important;
     left: 90px;
