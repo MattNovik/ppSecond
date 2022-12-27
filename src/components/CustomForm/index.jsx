@@ -20,7 +20,7 @@ const CustomForm = ({ classname, id, hidden }) => {
     onSubmit: (values, action) => {
       axios
         .post(
-          'https://studservis.ru/v2/wp-content/themes/studservice/ajax/createOrder.php',
+          'https://studservis.ru/wp-content/themes/studservice/ajax/createOrder.php',
           {
             data: values, // данные для отправки
             dataType: 'json',
