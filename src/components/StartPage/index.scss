@@ -23,6 +23,11 @@
 
     @include vp--767 {
       background-image: url('../../assets/images/mainBgMob.png');
+      background-position: center 75%;
+    }
+
+    @include vp--569 {
+      background-position: center 75%;
     }
   }
 

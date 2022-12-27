@@ -26,7 +26,6 @@ const WorkProcess = ({ data }) => {
               className="work-process__image"
               src="../../assets/images/process.png"
               alt="process"
-              placeholder="blurred"
               width={320}
               height={486}
             />

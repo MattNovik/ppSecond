@@ -18,30 +18,28 @@ const CustomForm = ({ classname, id, hidden }) => {
       agreeament: Yup.bool().oneOf([true], 's'),
     }),
     onSubmit: (values, action) => {
+      console.log(values);
+      let formData = new FormData();
+      formData.append('theme', values.theme);
+      formData.append('email', values.email);
       axios
         .post(
-          'https://studservis.ru/wp-content/themes/studservice/ajax/createOrder.php',
-          {
-            data: values, // данные для отправки
-            dataType: 'json',
-            processData: false,
-            cache: false,
-            contentType: false,
-          }
+          'https://dev.studservis.ru/wp-content/themes/studservice/ajax/createOrder.php',
+          formData
         )
         .then((response) => {
           console.log(response);
           if (
-            typeof response.link !== 'undefined' &&
-            response.link.length > 0
+            typeof response.data.link !== 'undefined' &&
+            response.data.link.length > 0
           ) {
-            return (window.location.href = response.link);
+            return (window.location.href = response.data.link);
           }
-          if (response.order_id && response.action === 'userIsset') {
+          if (response.data.order_id && response.data.action === 'userIsset') {
             return (window.location.href =
               'https://studservis-lk.ru/' +
               'orders/newOrder/id=' +
-              response.order_id +
+              response.data.order_id +
               '/new/');
           } else {
             return (window.location.href = 'https://studservis-lk.ru/');
