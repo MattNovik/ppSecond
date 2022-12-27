@@ -149,7 +149,7 @@
     @include vp--767 {
       width: 184px;
       height: 244px;
-      position: relative;
+      position: relative !important;
       left: 0;
     }
 
