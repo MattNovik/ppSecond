@@ -65,16 +65,16 @@
   }
 
   &__image {
-    position: absolute;
+    position: absolute !important;
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0);
-    width: 321px;
-    height: 486px;
+    width: 321px !important;
+    height: 486px !important;
 
     @include vp--1023 {
-      width: 235px;
-      height: 355px;
+      width: 235px !important;
+      height: 355px !important;
     }
   }
 

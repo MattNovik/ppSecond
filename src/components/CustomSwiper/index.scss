@@ -220,9 +220,7 @@
     }
 
     & div:first-of-type img {
-      @include vp--767 {
-        display: none !important;
-      }
+      display: none !important;
     }
 
     & picture {
