@@ -29,7 +29,7 @@ const CustomForm = ({ classname, id, hidden }) => {
         )
         .then((response) => {
           console.log(response);
-          if (
+          /* if (
             typeof response.data.link !== 'undefined' &&
             response.data.link.length > 0
           ) {
@@ -43,7 +43,7 @@ const CustomForm = ({ classname, id, hidden }) => {
               '/new/');
           } else {
             return (window.location.href = 'https://studservis-lk.ru/');
-          }
+          } */
         })
         .catch((error) => console.log('error'));
       /* action.resetForm({

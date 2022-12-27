@@ -13,17 +13,6 @@ const Main = () => {
       <CustomSwiper data={REVIEWS_LIST} />
       <WorkProcess data={WORK_PROCESS_LIST} />
       <MakeOrder />
-
-      <link
-        href="https://mattnovik.github.io/stud-test/docs/index.css"
-        rel="stylesheet"
-      />
-      <script src="https://mattnovik.github.io/stud-test/docs/index.js"></script>
-      <div
-        id="root"
-        data-subreddit="SUBREDDIT_HERE"
-        style={{ width: '700px', height: '700px' }}
-      ></div>
     </main>
   );
 };
