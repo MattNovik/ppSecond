@@ -22,10 +22,17 @@ const CustomForm = ({ classname, id, hidden }) => {
       let formData = new FormData();
       formData.append('theme', values.theme);
       formData.append('email', values.email);
+      formData.append('partnerId', 79);
       axios
         .post(
           'https://dev.studservis.ru/wp-content/themes/studservice/ajax/createOrder.php',
-          formData
+          formData,
+          {
+            auth: {
+              username: 'admin',
+              password: 'zde3jnm4HTD.gbq@amv',
+            },
+          }
         )
         .then((response) => {
           console.log(response);
@@ -45,7 +52,7 @@ const CustomForm = ({ classname, id, hidden }) => {
             return (window.location.href = 'https://studservis-lk.ru/');
           } */
         })
-        .catch((error) => console.log('error'));
+        .catch((error) => console.log(error));
       /* action.resetForm({
         values: {
           theme: '',

@@ -6,6 +6,7 @@ const path = require(`path`);
 
 module.exports = {
   siteMetadata: {
+    title: `Студсервис`,
     siteUrl: `https://www.yourdomain.tld`,
   },
   /* assetPrefix: './dist', */
@@ -33,6 +34,7 @@ module.exports = {
         path: path.join(__dirname, `src`, `assets/images`),
       },
     },
+
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -65,7 +67,5 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    /*     `@wardpeet/gatsby-plugin-static-site`,
-    'gatsby-plugin-relative-paths', */
   ],
 };
