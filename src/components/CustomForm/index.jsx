@@ -18,11 +18,10 @@ const CustomForm = ({ classname, id, hidden }) => {
       agreeament: Yup.bool().oneOf([true], 's'),
     }),
     onSubmit: (values, action) => {
-      console.log(values);
       let formData = new FormData();
       formData.append('theme', values.theme);
       formData.append('email', values.email);
-      formData.append('partnerId', 79);
+      formData.append('partnerId', document.querySelector('.partnerId').value);
       axios
         .post(
           'https://dev.studservis.ru/wp-content/themes/studservice/ajax/createOrder.php',
@@ -36,23 +35,23 @@ const CustomForm = ({ classname, id, hidden }) => {
         )
         .then((response) => {
           console.log(response);
-          /* if (
-            typeof response.data.link !== 'undefined' &&
-            response.data.link.length > 0
+          if (
+            typeof response.link !== 'undefined' &&
+            response.link.length > 0
           ) {
-            return (window.location.href = response.data.link);
+            return (window.location.href = response.link);
           }
-          if (response.data.order_id && response.data.action === 'userIsset') {
+          if (response.order_id && response.action === 'userIsset') {
             return (window.location.href =
               'https://studservis-lk.ru/' +
               'orders/newOrder/id=' +
-              response.data.order_id +
+              response.order_id +
               '/new/');
           } else {
             return (window.location.href = 'https://studservis-lk.ru/');
-          } */
+          }
         })
-        .catch((error) => console.log(error));
+        .catch((error) => console.log('error'));
       /* action.resetForm({
         values: {
           theme: '',
@@ -96,6 +95,7 @@ const CustomForm = ({ classname, id, hidden }) => {
           onChange={formik.handleChange}
           placeholder={'ВАШ E-MAIL'}
         />
+        <input type="hidden" name="partnerId" className="partnerId" value="1" />
         <button type="submit" className="custom-form__button">
           Рассчитать
         </button>
