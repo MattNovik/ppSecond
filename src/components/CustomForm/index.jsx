@@ -11,7 +11,6 @@ const CustomForm = ({ classname, id, hidden }) => {
       email: '',
       agreeament: true,
     },
-    /* validateOnChange: false, */
     validationSchema: Yup.object().shape({
       theme: Yup.string().required('Заполните это поле'),
       email: Yup.string().email('Введите email').required('Заполните это поле'),
@@ -52,14 +51,6 @@ const CustomForm = ({ classname, id, hidden }) => {
           }
         })
         .catch((error) => console.log('error'));
-      /* action.resetForm({
-        values: {
-          theme: '',
-          email: '',
-          agreeament: true,
-        },
-      }); */
-      /* alert(JSON.stringify(values, null, 2)); */
     },
   });
 
@@ -95,7 +86,12 @@ const CustomForm = ({ classname, id, hidden }) => {
           onChange={formik.handleChange}
           placeholder={'ВАШ E-MAIL'}
         />
-        <input type="hidden" name="partnerId" className="partnerId" value="1" />
+        <input
+          type="hidden"
+          name="partnerId"
+          className="partnerId"
+          value="#PARTNER_ID_VALUE#"
+        />
         <button type="submit" className="custom-form__button">
           Рассчитать
         </button>
