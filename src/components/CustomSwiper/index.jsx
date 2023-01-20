@@ -4,7 +4,7 @@ import * as React from 'react';
 import { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Braces from '../../assets/svg/braces.svg';
-import ArrowLong from '../../assets/svg/arrowLong.svg';
+import Arrow from '../../assets/svg/arrow.svg';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const CustomSwiper = ({ data }) => {
@@ -33,10 +33,10 @@ const CustomSwiper = ({ data }) => {
         >
           <div className="custom-swiper__buttons">
             <button className="swiper-button-prev" type="button">
-              <ArrowLong />
+              <Arrow />
             </button>
             <button className="swiper-button-next" type="button">
-              <ArrowLong />
+              <Arrow />
             </button>
           </div>
           {data && data.length
